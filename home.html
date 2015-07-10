@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My maps | maps, trajet, vacances</title>
+    <meta name="description" content="Trouvez un trajet adapté" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        My Maps
+      </h1>
+    </header>
+    <div id="all">
+      <aside>
+        <h2>Itineraire</h2>
+        <form action="#" method="get" name="direction" id="direction">
+          <h3>Coordonées</h3>
+            <h4>Point de départ</h4>
+            <div class="border">
+              <label>
+                Latitude
+              </label>
+              <input type="text" name="lat" id="lat" placeholder="latitude">
+            </div>
+            <div class="border">
+              <label>
+                Longitude
+              </label>
+              <input type="text" name="long" id="long" placeholder="longitude">
+            </div>
+            <h4>Arrivé</h4>
+            <div class="border">
+              <label>
+                Latitude
+              </label>
+              <input type="text" name="lat2" id="lat2" placeholder="latitude">
+            </div>
+            <div class="border">
+              <label>
+                Longitude
+              </label>
+              <input type="text" name="long2" id="long2" placeholder="longitude">
+            </div>
+            <input type="button" value="Recherche" id="lat_iti">
+          <h3>Ville</h3>
+            <div class="border">
+              <h4>Point de départ</h4>
+              <label>Adresse : </label>
+              <input type="text" name="start" id="start" placeholder="Départ">
+            </div>
+            <div class="border">
+              <h4>Arrivé</h4>
+              <label>Adresse : </label>
+              <input type="text" name="end" id="end" placeholder="Arrivé">   
+            </div>
+            <input type="button" id= "iti" class="block" value="Calculer l'itinéraire">   
+        </form>
+      </aside>
+      <section id="corps">
+        <div id="map-canvas"></div>
+        <a href="#" title="Full screen" id="full">Full screen</a>
+      </section>
+      <aside id="right">
+        <h2>Place</h2>
+          <h3>Coordonées</h3>
+            <label>Latitude</label>
+            <input type="text" id="lat_place" name="lat_place">
+            <label>Longitude</label>
+            <input type="text" id="long_place" name="long_place">
+            <input type="button" value="Recherche" id="btn_place_lat">
+          <h3>Ville</h3>
+            <label>Entrez un lieu :</label>
+            <input type="text" name="place" id="place" placeholder="Lieu">
+            <input type="button" value="Recherche" id="btn_place">
+            <input type="button" value="Supprimer tous les markeurs" class=" block" id="delMarker">
+      </aside>
+    <div class="clear"></div>
+    </div>
+    <div id="map-panel"></div>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhLXs3OYvWUad9WM02MsBiz3ey1PUnKSM&amp;libraries=places"></script>
+  <script type="text/javascript" src="js/my_script.js"></script>
+  </body>
+</html>
